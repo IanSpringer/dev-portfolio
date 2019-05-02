@@ -9,7 +9,7 @@ class Tile extends Component {
 
   render() {
     return (
-      <a href={{this.props.link}} className="my-work__tile" style={{backgroundImage: `url(${this.props.background})`}}
+      <a href={this.props.link} className="my-work__tile" style={{backgroundImage: `url(${this.props.background})`}}
 >
         <label className="my-work__label noto">{this.props.title}</label>
         <div className="my-work__overlay"></div>
