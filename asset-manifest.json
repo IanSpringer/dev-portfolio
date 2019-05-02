@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/dev-portfolio/static/css/main.b339247c.chunk.css",
+    "main.css": "/dev-portfolio/static/css/main.abd60c2a.chunk.css",
     "main.js": "/dev-portfolio/static/js/main.1120d2fe.chunk.js",
     "main.js.map": "/dev-portfolio/static/js/main.1120d2fe.chunk.js.map",
     "runtime~main.js": "/dev-portfolio/static/js/runtime~main.e91790c5.js",
@@ -8,9 +8,9 @@
     "static/js/2.158cb49c.chunk.js": "/dev-portfolio/static/js/2.158cb49c.chunk.js",
     "static/js/2.158cb49c.chunk.js.map": "/dev-portfolio/static/js/2.158cb49c.chunk.js.map",
     "index.html": "/dev-portfolio/index.html",
-    "precache-manifest.279451fbb87017152603c0046850cbfd.js": "/dev-portfolio/precache-manifest.279451fbb87017152603c0046850cbfd.js",
+    "precache-manifest.3eff8e43110812c7bd17c8f7d56c1283.js": "/dev-portfolio/precache-manifest.3eff8e43110812c7bd17c8f7d56c1283.js",
     "service-worker.js": "/dev-portfolio/service-worker.js",
-    "static/css/main.b339247c.chunk.css.map": "/dev-portfolio/static/css/main.b339247c.chunk.css.map",
+    "static/css/main.abd60c2a.chunk.css.map": "/dev-portfolio/static/css/main.abd60c2a.chunk.css.map",
     "static/media/Qardoos.otf": "/dev-portfolio/static/media/Qardoos.18e9fc29.otf",
     "static/media/boll.jpg": "/dev-portfolio/static/media/boll.0d1b3a81.jpg",
     "static/media/draper.png": "/dev-portfolio/static/media/draper.977351dc.png",
