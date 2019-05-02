@@ -52,7 +52,7 @@ class MyWork extends Component {
   buildBlocks() {
     console.log('hello')
     const blockElement = this.state.workArray.map((site, key) => {
-      return <Tile className="my-work__block" key={key} title={site.title} background={site.img}>{site.title}</Tile>
+      return <Tile className="my-work__block" key={key} title={site.title} background={site.img} link={site.link}>{site.title}</Tile>
     })
 
     return blockElement;
