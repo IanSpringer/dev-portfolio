@@ -28,7 +28,7 @@ h2 {
 .banner {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   padding: 50px;
   height: calc(100vh - 130px);
 }
@@ -44,6 +44,10 @@ h2 {
 @media (min-width: 768px) {
   h1 {
     font-size: 70px;
+  }
+
+  .banner {
+    justify-content: flex-end;
   }
 
   .banner__wrap {
