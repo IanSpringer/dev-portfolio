@@ -1,0 +1,30 @@
+.what-i-do {
+  padding: 50px 20px;
+}
+
+.what-i-do__header {
+  margin-bottom: 35px;
+}
+
+.what-i-do__desc {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 28px;
+  letter-spacing: .3px;
+  font-size: 14px;
+}
+
+.what-i-do__cta {
+
+}
+
+.what-i-do__cta a {
+  color: #f67c42;
+}
+
+@media (min-width: 768px) {
+  .what-i-do__desc {
+    font-size: 16px;
+    line-height: 34px;
+  }
+}

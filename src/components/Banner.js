@@ -1,10 +1,11 @@
 
 import React, { Component } from 'react';
 import Title from "./Title";
+import Arrow from './Arrow';
 
 import '../styles/Banner.css'
 
-class Drum extends Component {
+class Banner extends Component {
   constructor(props) {
     super(props);
 
@@ -13,10 +14,11 @@ class Drum extends Component {
   render() {
     return (
       <div className="banner">
+        <Arrow />
         <Title />
       </div>
     )
   }
 }
 
-export default Drum;
+export default Banner;

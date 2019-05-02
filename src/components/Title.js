@@ -18,7 +18,7 @@ class Title extends Component {
   }
 
   buildName(word) {
-    return word.split('').map((letter, key) => <Letter letter={letter} index={key}/>)
+    return word.split('').map((letter, key) => <Letter letter={letter} index={key} key={key} />)
   }
 
   fadeText(element) {

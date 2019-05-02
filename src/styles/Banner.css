@@ -10,17 +10,18 @@
 }
 
 h1 {
-  font-size: 70px;
+  font-size: 48px;
   font-weight: 100;
   letter-spacing: 1.9px;
   margin: 10px 0px;
+  line-height: 48px;
 }
 
 
 
 h2 {
-  font-size: 36px;
-  letter-spacing: .5px;
+  font-size: 28px;
+  letter-spacing: 0px;
   margin: 8px 0px;
 }
 
@@ -29,9 +30,23 @@ h2 {
   align-items: center;
   justify-content: flex-end;
   padding: 50px;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 130px);
 }
 
 .banner__wrap {
-  text-align: left;
+  text-align: center;
+}
+
+.banner__subtitle .banner__letter {
+  font-weight: 100;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 70px;
+  }
+
+  .banner__wrap {
+    text-align: left;
+  }
 }
