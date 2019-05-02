@@ -15,9 +15,11 @@ class Banner extends Component {
   render() {
     return (
       <div className="banner">
-        <Arrow />
-        <Title />
-        <LineWrap />
+        <div className="banner__inner">
+          <Arrow />
+          <Title />
+          <LineWrap />
+        </div>
       </div>
     )
   }

@@ -26,6 +26,10 @@ h2 {
 }
 
 .banner {
+  position: relative;
+}
+
+.banner__inner {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,6 +37,8 @@ h2 {
   height: calc(100vh - 130px);
   position: relative;
   overflow: hidden;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .banner__wrap {
@@ -53,7 +59,7 @@ h2 {
     font-size: 70px;
   }
 
-  .banner {
+  .banner__inner {
     justify-content: flex-end;
   }
 
