@@ -11,7 +11,7 @@ class WhatIDo extends Component {
     return (
       <div className="what-i-do">
         <h2 className="what-i-do__header noto">What I Do</h2>
-        <p className="what-i-do__desc noto">Blobbing code together since 2015. I am a driven front end programmer and UI specialist, holding a breadth of knowledge in HTML, CSS, Javascipt, e-commerce, and web design. My skills are highlighted by my experience delivering high quality code to enterprise level e-commerce brands.</p>
+        <p className="what-i-do__desc noto">I write. I consult. I ask questions. I am a passionate UI Engineer, possessing a deep knowledge of the core front end technologies such as HTML5, Javascript, CSS, React, jQuery, and Node. My skills are highlighted by my extensive experience delivering high quality code to enterprise level e-commerce brands.</p>
         <h4 className="what-i-do__cta noto">Like what you hear? <a clasName="noto" href="mailto:ianspringer12@gmail.com">Shoot me an email</a></h4>
       </div>
     )

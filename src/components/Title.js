@@ -9,7 +9,7 @@ class Title extends Component {
     this.fadeText = this.fadeText.bind(this)
     this.state = {
       name: "Ian Springer",
-      title: "Web Developer"
+      title: "Front End Developer"
     }
   }
 
