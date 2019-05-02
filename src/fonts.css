@@ -1,0 +1,5 @@
+@font-face {
+  font-family: "Qardoos";
+  src: url("../../../public/fonts/Qardos.otf") format("open-type"),
+       url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+}

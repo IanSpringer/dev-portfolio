@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'Qardoos';
+  font-style: normal ;
+  font-weight: normal;
+  src: url('../fonts/Qardoos.otf') format('open-type');
+}
+
+.noto {
+  font-family: 'Noto Serif TC', serif;
+}
+
+h1 {
+  font-size: 70px;
+  font-weight: 100;
+  letter-spacing: 1.9px;
+  margin: 10px 0px;
+}
+
+
+
+h2 {
+  font-size: 36px;
+  letter-spacing: .5px;
+  margin: 8px 0px;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 50px;
+  height: calc(100vh - 100px);
+}
+
+.banner__wrap {
+  text-align: left;
+}
