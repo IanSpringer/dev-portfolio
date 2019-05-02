@@ -11,7 +11,6 @@ class Arrow extends Component {
   render() {
     return (
       <div className="noto arrow">
-        <span className="arrow-line"></span>
       </div>
     )
   }
