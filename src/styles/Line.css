@@ -41,6 +41,7 @@
 	top: 0px;
 	background-color: #553d67;
 	left: 154px;
+	display: none;
 }
 
 .line--2.is-active {
@@ -133,4 +134,10 @@
 
 .line--10.is-active {
 	height: 60%;
+}
+
+@media (min-width: 768px) {
+	.line--2 {
+		display: block;
+	}
 }

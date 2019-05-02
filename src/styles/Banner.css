@@ -32,6 +32,7 @@ h2 {
   padding: 50px;
   height: calc(100vh - 130px);
   position: relative;
+  overflow: hidden;
 }
 
 .banner__wrap {
@@ -52,11 +53,11 @@ h2 {
     font-size: 70px;
   }
 
-/*  .banner {
+  .banner {
     justify-content: flex-end;
   }
 
   .banner__wrap {
     text-align: left;
-  }*/
+  }
 }

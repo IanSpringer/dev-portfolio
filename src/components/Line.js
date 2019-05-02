@@ -13,7 +13,7 @@ class Line extends Component {
   }
 
   componentDidMount() {
-    // setTimeout(this.animateLines, 300);
+    setTimeout(this.animateLines, 300);
   }
 
   animateLines() {
