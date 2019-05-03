@@ -4,11 +4,18 @@
 	transform: perspective(200px) translateZ(80px);
 	transition: opacity .5s ease, transform 1.6s ease, filter 1.6s ease;
 	display: inline-block;
-	min-width: 8px;
+	/*min-width: 4px;*/
+  letter-spacing: 0px;
 }
 
 .banner__letter.is-active {
 	opacity: 1;
 	filter: blur(0px);
 	transform: perspective(200px) translateZ(0px);
+}
+
+@media (min-width: 768px) {
+  .banner__letter {
+    /*min-width: 8px;*/
+  }
 }

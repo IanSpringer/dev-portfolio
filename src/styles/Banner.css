@@ -10,9 +10,9 @@
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 32px;
   font-weight: 100;
-  letter-spacing: 1.9px;
+  letter-spacing: .2px;
   margin: 10px 0px;
   line-height: 48px;
 }
@@ -20,7 +20,7 @@ h1 {
 
 
 h2 {
-  font-size: 26px;
+  font-size: 18px;
   letter-spacing: 0px;
   margin: 8px 0px;
 }
@@ -43,6 +43,8 @@ h2 {
 
 .banner__wrap {
   text-align: center;
+  z-index: 2;
+  background: white;
 }
 
 .banner__title {
@@ -50,13 +52,38 @@ h2 {
   margin-bottom: 22px;
 }
 
+.banner__title .banner__letter {
+  min-width: 6px;
+}
+
 .banner__subtitle .banner__letter {
   font-weight: 100;
+  min-width: 3px;
+}
+
+@media (min-width: 400px) {
+  h1 {
+    font-size: 48px;
+    font-weight: 100;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  .banner__title .banner__letter {
+    min-width: 8px;
+  }
+
+  .banner__subtitle .banner__letter {
+    min-width: 5px;
+  }
 }
 
 @media (min-width: 768px) {
   h1 {
     font-size: 70px;
+    letter-spacing: 1.9px;
   }
 
   .banner__inner {
