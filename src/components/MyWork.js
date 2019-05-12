@@ -60,7 +60,7 @@ class MyWork extends Component {
 
   render() {
     return (
-      <div className="my-work">
+      <div className="my-work" data-my-work="true">
         <h2 className="my-work__header noto">My Recent Work</h2>
         <div className="my-work__wrapper">
           {this.buildBlocks()}
