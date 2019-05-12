@@ -32,8 +32,9 @@ class Title extends Component {
   }
 
   render() {
+
     return (
-      <div className="banner__wrap">
+      <div className="banner__wrap" style={this.props.dataStyle}>
         <h1 className="banner__title noto">
           {this.buildName(this.state.name)}
         </h1>
