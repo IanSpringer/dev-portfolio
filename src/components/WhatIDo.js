@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import '../styles/WhatIDo.css';
 
 class WhatIDo extends Component {
-  constructor(props) {
-    super(props);
-
-  }
 
   render() {
     return (

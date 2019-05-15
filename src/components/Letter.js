@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import '../styles/Letter.css';
 
 class Letter extends Component {
-  constructor(props) {
-    super(props);
-
-  }
 
   render() {
     return (

@@ -2,8 +2,7 @@
 import React, { Component } from 'react';
 import Title from "./Title";
 import Arrow from './Arrow';
-import LineWrap from './LineWrap';
-import desk from '../images/computer.jpg';
+import desk from '../images/boll.jpg';
 
 import '../styles/Banner.css'
 
@@ -13,7 +12,8 @@ class Banner extends Component {
     this.handleScroll = this.handleScroll.bind(this);
     this.state = {
       "positionY": 0,
-      "opacity": 1
+      "opacity": 1,
+      "background": desk
     }
   }
 
@@ -31,9 +31,12 @@ class Banner extends Component {
       transform: `translate(0px, ${this.state.positionY}px)`,
       opacity: this.state.opacity
     }
-    console.log(transformStyles)
+
+    const bannerStyles = {
+      backgroundImage: this.state.background
+    }
     return (
-      <div className="banner" >
+      <div className="banner" style={bannerStyles}>
         <div className="overlay"></div>
         <div className="banner__inner">
           <Arrow />

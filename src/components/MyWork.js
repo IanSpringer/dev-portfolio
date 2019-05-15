@@ -12,6 +12,8 @@ class MyWork extends Component {
   constructor(props) {
     super(props);
     this.buildBlocks = this.buildBlocks.bind(this);
+    this.showBlocks = this.showBlocks.bind(this);
+    this.checkScroll = this.checkScroll.bind(this);
     this.state = {
       "workArray": [
         {
@@ -50,12 +52,32 @@ class MyWork extends Component {
   }
 
   buildBlocks() {
-    console.log('hello')
     const blockElement = this.state.workArray.map((site, key) => {
-      return <Tile className="my-work__block" key={key} title={site.title} background={site.img} link={site.link}>{site.title}</Tile>
+      return <Tile className="my-work__block js-work-block" key={key} title={site.title} background={site.img} link={site.link}>{site.title}</Tile>
     })
 
     return blockElement;
+  }
+
+  showBlocks() {
+    const blocks = Array.from(document.querySelectorAll('.js-work-block'));
+    blocks.map((block, key) => {
+      setTimeout(function() {
+        block.classList.add('is-visible')
+      }, 400)
+      return block;
+    })
+  }
+
+  checkScroll(event) {
+    // const checkScroll = event.scrollY;
+    // console.log(threshold.offsetTop)
+    console.log(event.scrollY);
+
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', () => this.checkScroll(window, '.'))
   }
 
   render() {

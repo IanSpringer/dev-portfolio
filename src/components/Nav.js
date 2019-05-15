@@ -11,7 +11,7 @@ class Nav extends Component {
     this.state = {
       "links": [{"title": "My Work", "destination": "[data-my-work]"},
                 {"title": "About", "destination": "[data-what-i-do]"},
-                {"title": "Github", "destination": "https://github.com/IanSpringer"}]
+                {"title": "Github", "destination": "https://github.com/IanSpringer", "asset": ""}]
     }
   }
 
@@ -25,7 +25,6 @@ class Nav extends Component {
     });
 
     scrollSpy.update();
-
   }
 
   scrollToSection(event) {
@@ -35,9 +34,9 @@ class Nav extends Component {
   }
 
   renderNav() {
-    const nav = this.state.links.map(link => {
+    const nav = this.state.links.map((link, key) => {
       if (link.destination.includes('https://') ) {
-        return <a href={link.destination} className="nav__link noto">{link.title}</a>
+        return <a href={link.destination} key={key} className="nav__link noto">{link.title}</a>
       }
 
       return <span className="js-scroll-to-section nav__link noto" onClick={this.scrollToSection} data-scroll-to={link.destination}>{link.title}</span>
@@ -45,10 +44,6 @@ class Nav extends Component {
 
     return nav;
   }
-
-  // componentDidMount() {
-  //   this.renderNav()
-  // }
 
   render() {
     return (
