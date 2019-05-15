@@ -60,24 +60,21 @@ class MyWork extends Component {
   }
 
   showBlocks() {
-    const blocks = Array.from(document.querySelectorAll('.js-work-block'));
+    const blocks = Array.from(document.querySelectorAll('.js-work-tile'));
     blocks.map((block, key) => {
       setTimeout(function() {
         block.classList.add('is-visible')
-      }, 400)
+      }, 70 * (key + 1))
       return block;
     })
   }
 
   checkScroll(event) {
-    // const checkScroll = event.scrollY;
-    // console.log(threshold.offsetTop)
-    console.log(event.scrollY);
-
+    return event.scrollY > 400 ? this.showBlocks() : false;
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', () => this.checkScroll(window, '.'))
+    window.addEventListener('scroll', () => this.checkScroll(window))
   }
 
   render() {
