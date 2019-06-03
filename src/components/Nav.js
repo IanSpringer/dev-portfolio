@@ -11,9 +11,12 @@ class Nav extends Component {
     this.state = {
       "links": [{"title": "My Work", "destination": "[data-my-work]"},
                 {"title": "About", "destination": "[data-what-i-do]"},
-                {"title": "Github", "destination": "https://github.com/IanSpringer", "asset": ""}]
+                {"title": "Github", "destination": "https://github.com/IanSpringer", "asset": ""}],
+      "header": [{"title": "Ian Springer", "description": "Front End Developer", "destination": "[data-banner]"}],
+      "hamburgerState": "is-hidden"
     }
   }
+
 
   componentDidMount() {
     Events.scrollEvent.register('begin', function(to, element) {
@@ -33,13 +36,17 @@ class Nav extends Component {
     return scroll.scrollTo(scrollTo);
   }
 
-  renderNav() {
-    const nav = this.state.links.map((link, key) => {
+  renderNav(links) {
+    const nav = links.map((link, key) => {
+    let description = "";
+      if(link.description) {
+        description = <span>| {link.description}</span>
+      }
       if (link.destination.includes('https://') ) {
-        return <a href={link.destination} key={key} className="nav__link noto">{link.title}</a>
+        return <a href={link.destination} key={key} className="nav__link noto">{link.title} {description}</a>
       }
 
-      return <span className="js-scroll-to-section nav__link noto" onClick={this.scrollToSection} data-scroll-to={link.destination}>{link.title}</span>
+      return <span className="js-scroll-to-section nav__link noto" onClick={this.scrollToSection} data-scroll-to={link.destination}>{link.title} {description}</span>
     })
 
     return nav;
@@ -47,11 +54,18 @@ class Nav extends Component {
 
   render() {
     return (
-      <nav className="nav">
-        <div className="nav__inner">
-        {this.renderNav()}
-        </div>
-      </nav>
+      <div>
+        <nav className="nav desktop">
+          <div className="nav__inner">
+            <div className="nav__left">
+            {this.renderNav(this.state.header)}
+            </div>
+            <div className="nav__rght">
+            {this.renderNav(this.state.links)}
+            </div>
+          </div>
+        </nav>
+      </div>
     )
   }
 }

@@ -2,12 +2,20 @@
   position: fixed;
   width: 100vw;
   top: 0px;
-  /*padding: 20px;*/
-  /*background-color: rgba(0, 0,0, .4);*/
   z-index: 4;
   left: 0;
   box-sizing: border-box;
   border-bottom: 1px solid rgba(255, 255, 255, .1);
+  background-color: rgba(85,61,103, .8)
+}
+
+.nav.mobile.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .3s ease;
+  position: fixed;
+  top: 40px;
+  right: 40px;
 }
 
 .nav__inner {
@@ -15,7 +23,11 @@
   margin: 0 auto;
   padding: 20px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+}
+
+.nav__left span {
+  text-decoration: none;
 }
 
 .nav__link {

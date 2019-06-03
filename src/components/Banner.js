@@ -36,7 +36,7 @@ class Banner extends Component {
       backgroundImage: this.state.background
     }
     return (
-      <div className="banner" style={bannerStyles}>
+      <div className="banner" style={bannerStyles} data-banner>
         <div className="overlay"></div>
         <div className="banner__inner">
           <Arrow />
