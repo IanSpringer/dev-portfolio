@@ -39,7 +39,6 @@ class Banner extends Component {
       <div className="banner" style={bannerStyles} data-banner>
         <div className="overlay"></div>
         <div className="banner__inner">
-          <Arrow />
           <Title dataStyle={transformStyles}/>
         </div>
       </div>

@@ -6,8 +6,7 @@ class Arrow extends Component {
 
   render() {
     return (
-      <div className="noto arrow">
-      </div>
+      <button className="button banner__arrow noto">View My Work</button>
     )
   }
 }

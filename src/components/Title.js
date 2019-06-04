@@ -1,4 +1,4 @@
-
+import Arrow from './Arrow';
 import React, { Component } from 'react';
 import Letter from './Letter'
 
@@ -41,6 +41,7 @@ class Title extends Component {
         <h2 className="banner__subtitle noto">
           {this.buildName(this.state.title)}
         </h2>
+        <Arrow/>
       </div>
     )
   }

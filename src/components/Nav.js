@@ -1,3 +1,4 @@
+import ReactDOM from "react-dom";
 import React, { Component } from 'react';
 import * as Scroll from 'react-scroll';
 import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
@@ -8,12 +9,13 @@ class Nav extends Component {
     super(props);
     this.renderNav = this.renderNav.bind(this);
     this.scrollToSection = this.scrollToSection.bind(this);
+    this.stickNav = this.stickNav.bind(this);
     this.state = {
       "links": [{"title": "My Work", "destination": "[data-my-work]"},
                 {"title": "About", "destination": "[data-what-i-do]"},
                 {"title": "Github", "destination": "https://github.com/IanSpringer", "asset": ""}],
       "header": [{"title": "Ian Springer", "description": "Front End Developer", "destination": "[data-banner]"}],
-      "hamburgerState": "is-hidden"
+      "navState": ""
     }
   }
 
@@ -26,6 +28,10 @@ class Nav extends Component {
     Events.scrollEvent.register('end', function(to, element) {
       console.log("end", arguments);
     });
+
+    window.addEventListener('scroll', this.stickNav);
+
+    this.stickNav();
 
     scrollSpy.update();
   }
@@ -52,20 +58,26 @@ class Nav extends Component {
     return nav;
   }
 
+  stickNav() {
+    const nodeOffset = ReactDOM.findDOMNode(this).offsetTop;
+    console.log(nodeOffset)
+    if(window.scrollY > nodeOffset) {
+    console.log('supp')
+     return this.setState({navState: "is-sticky"}) 
+    }
+    return this.setState({navState: ""})
+  }
+
   render() {
+    const classes = `nav__inner ${this.state.navState}`
     return (
-      <div>
-        <nav className="nav desktop">
-          <div className="nav__inner">
-            <div className="nav__left">
-            {this.renderNav(this.state.header)}
-            </div>
-            <div className="nav__rght">
+      <nav className="nav">
+        <div className={classes}>
+          <div className="nav__inner-wrap">
             {this.renderNav(this.state.links)}
-            </div>
           </div>
-        </nav>
-      </div>
+        </div>
+      </nav>
     )
   }
 }

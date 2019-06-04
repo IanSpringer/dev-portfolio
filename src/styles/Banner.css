@@ -19,8 +19,6 @@ h1 {
   color: white;
 }
 
-
-
 h2 {
   font-size: 18px;
   letter-spacing: 0px;
@@ -47,8 +45,8 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 50px;
-  height: calc(100vh - 130px);
+  padding: 0px 50px;
+  height: calc(100vh - 84px);
   position: relative;
   overflow: hidden;
   max-width: 1100px;
