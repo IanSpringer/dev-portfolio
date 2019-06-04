@@ -5,15 +5,38 @@
     100% {top:62px;}
 }
 
+@keyframes animateButton /* <--- here */
+{
+    0%   {transform: translateY(20px); opacity: 0}
+    100% {transform: translateY(0px); opacity: 1}
+}
 .banner__arrow {
   background: transparent;
-  border: 3px solid white;
-  padding: 10px 30px;
+  border: 1px solid white;
+  padding: 10px 0px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   color: white;
-  font-size: 20px;
-  margin-top: 30px;
+  font-size: 14px;
+  margin-top: 20px;
   text-transform: uppercase;
   transition: all .3s ease;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.banner__arrow.is-active {
+  animation-name: animateButton;
+  animation-delay: 3s;
+  animation-direction: normal;
+  animation-duration: .5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  /*opacity: 1;*/
 }
 
 .banner__arrow:after {
@@ -23,16 +46,57 @@
   border-right: 1px solid white;
   border-bottom: 1px solid white;
   margin-bottom: 1px;
-  transform: rotate(-45deg);
+  transform: rotate(45deg);
   transition: all .3s ease;
   display: inline-block;
+  position: absolute;
+  left: calc(50% - 5px);
+  top: calc(50% - 5px);
 }
 
-.banner__arrow:hover {
-  background-color: white;
-  color: rgba(85,61,103, 1);
+.banner__arrow:before {
+  content: 'See My Work';
+  transition: all .3s ease;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -105%;
+  opacity: 0;
+  white-space: nowrap;
 }
 
-.banner__arrow:hover:after {
-  transform: rotate(45deg);
+
+
+.button__wave {
+  position: absolute;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  display: block;
+  width: 0px;
+  background-color: rgba(255, 255, 255, .1);
+  transition: all .3s ease;
+}
+
+.banner__arrow:hover .button__wave {
+  /*width: 100%;*/
+}
+
+@media (min-width: 768px) {
+  .banner__arrow:hover {
+    width: 160px;
+    border-radius: 1px;
+    border: 1px solid white;
+  }
+
+  .banner__arrow:hover:after {
+    opacity: 0;
+    top: -105%;
+  }
+
+  .banner__arrow:hover:before {
+    bottom: calc(50% - 10px);
+    opacity: 1;
+  }
 }

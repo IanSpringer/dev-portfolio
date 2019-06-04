@@ -26,7 +26,7 @@ class Title extends Component {
     stringArray.map((letter, key) => {
       setTimeout(() => {
         letter.classList.add('is-active');
-      }, 120 * (key + 1));
+      }, 60 * (key + 1));
       return letter;
     })
   }

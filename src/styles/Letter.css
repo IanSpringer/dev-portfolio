@@ -2,7 +2,7 @@
 	opacity: 0;
 	filter: blur(4px);
 	transform: perspective(200px) translateZ(80px);
-	transition: opacity .5s ease, transform 1.6s ease, filter 1.6s ease;
+	transition: opacity .8s ease, transform 2s ease, filter 2s ease;
 	display: inline-block;
 	/*min-width: 4px;*/
   letter-spacing: 0px;

@@ -1,15 +1,20 @@
 .nav {
   z-index: 4;
   box-sizing: border-box;
-  height: 84px;
+  /*height: 84px;*/
+  overflow: hidden;
+
+  /*transition: all 1s ease;*/
+  height: 0px;
 }
 
 .nav__inner {
   border-bottom: 1px solid rgba(255, 255, 255, .1);
   background-color: rgba(85,61,103, 1);
   width: 100vw;
-  height: 84px;
+  height: 0px;
   z-index: 10;
+  transition: all 1s ease;
 }
 
 .nav__inner.is-sticky {
@@ -19,9 +24,10 @@
 }
 
 .nav__inner-wrap {
+    background-color: #f67c42;
   height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -33,9 +39,10 @@
   opacity: .8;
   transition: opacity .2s ease;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 12px;
 }
 
 .nav__link:hover {
   opacity: 1;
 }
+

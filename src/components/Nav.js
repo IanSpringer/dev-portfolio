@@ -10,11 +10,13 @@ class Nav extends Component {
     this.renderNav = this.renderNav.bind(this);
     this.scrollToSection = this.scrollToSection.bind(this);
     this.stickNav = this.stickNav.bind(this);
+    this.growNav = this.growNav.bind(this);
     this.state = {
       "links": [{"title": "My Work", "destination": "[data-my-work]"},
                 {"title": "About", "destination": "[data-what-i-do]"},
                 {"title": "Github", "destination": "https://github.com/IanSpringer", "asset": ""}],
       "header": [{"title": "Ian Springer", "description": "Front End Developer", "destination": "[data-banner]"}],
+      "navHeight": 0,
       "navState": ""
     }
   }
@@ -29,7 +31,10 @@ class Nav extends Component {
       console.log("end", arguments);
     });
 
-    window.addEventListener('scroll', this.stickNav);
+    window.addEventListener('scroll', () => {
+     this.stickNav(ReactDOM.findDOMNode(this).offsetTop);
+     this.growNav();
+    })
 
     this.stickNav();
 
@@ -58,20 +63,28 @@ class Nav extends Component {
     return nav;
   }
 
-  stickNav() {
-    const nodeOffset = ReactDOM.findDOMNode(this).offsetTop;
-    console.log(nodeOffset)
-    if(window.scrollY > nodeOffset) {
-    console.log('supp')
-     return this.setState({navState: "is-sticky"}) 
-    }
+  stickNav(offset) {
+    if(window.scrollY > offset) return this.setState({navState: "is-sticky"})
     return this.setState({navState: ""})
   }
 
+  growNav() {
+    // if(window.scrollY > 30) {
+    //   var grow =  (window.scrollY - 30) * .1;
+    // } else {
+    //   grow = 0;
+    // }
+    // if(grow < 65) return this.setState({navHeight: grow})
+  }
+
+
   render() {
     const classes = `nav__inner ${this.state.navState}`
+    const navStyles = {
+      height: `${this.state.navHeight}px`
+    }
     return (
-      <nav className="nav">
+      <nav className="nav" style={navStyles}>
         <div className={classes}>
           <div className="nav__inner-wrap">
             {this.renderNav(this.state.links)}
